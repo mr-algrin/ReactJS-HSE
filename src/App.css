@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ffc40b;
 }
 
 .App-link {
@@ -35,4 +35,43 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+ul {
+  padding: 10px;
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем отступы*/
+  padding-left: 0; /*убираем отступы*/
+}
+a {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+}
+li {
+  font-size: 15pt;
+  display: inline; /*Размещаем список горизонтально для реализации меню*/
+  margin-right:10px; /*Добавляем отступ у пунктов меню*/
+}
+
+div.item{
+  padding: 10px;
+  background: lightblue;
+  font-size: 17pt;
+  border: 3px solid;
+  border-color: darkseagreen;
+}
+
+.sortButton{
+  width: 50%;
+  height: 40px;
+  font-size: large;
+  background: khaki;
+  border-radius: 10px;
+}
+
+#add{
+  padding: 10px;
+  margin: 20px;
+  width: 250px;
+  height: 50px;
 }
