@@ -1,15 +1,11 @@
 import React from "react";
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
-import Routes from "./Routes";
 import TrackerForm from "./TrackerForm";
 import TrackersView from "./TrackersView";
 
 
 
 class Menu extends React.Component{
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div>
@@ -21,7 +17,8 @@ class Menu extends React.Component{
                     {/*<div id={'content'}><Routes/></div>*/}
                     <div id={'content'}>
                         <Route exact path={"/add_tracker"} render={()=><TrackerForm updateData={this.props.updateData}/>} />
-                        <Route path={"/list_trackers"} render={()=><TrackersView trackers={this.props.trackers}/>}/>
+                        <Route path={"/list_trackers"} render={()=><TrackersView trackers={this.props.trackers } sortByName={this.props.sortByName}
+                                                                                 sortByPriority={this.props.sortByPriority}/>}/>
                     </div>
                 </Router>
             </div>

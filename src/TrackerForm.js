@@ -6,19 +6,13 @@ class TrackerForm extends React.Component{
         name : '',
         description : '',
         priority : ''
-    }
-    constructor(props) {
-        super(props);
-        this.handleAddTrackerClick = this.handleAddTrackerClick.bind(this);
-        this.handleChangeName = this.handleChangeName.bind(this);
-        this.handleChangeDescription = this.handleChangeDescription.bind(this);
-        this.handleChangePriority = this.handleChangePriority.bind(this);
-    }
-    handleAddTrackerClick(){
+    };
+
+    handleAddTrackerClick=()=>{
         console.log('TestCLick');
         let dict = this.state;
         for(let key in dict){
-            if (dict[key].trim() == ''){
+            if (dict[key].trim() === ''){
                 alert("Вы не заполнили все поля");
                 return;
             }
@@ -26,20 +20,20 @@ class TrackerForm extends React.Component{
         this.setState({name:'', description: '', priority: ''});
         this.props.updateData(dict);
         console.log(dict);
-    }
+    };
 
-    handleChangeName(event){
+    handleChangeName=(event)=>{
         this.setState({name: event.target.value})
-    }
+    };
 
-    handleChangeDescription(event){
+    handleChangeDescription=(event)=>{
         this.setState({description: event.target.value})
-    }
+    };
 
-    handleChangePriority(event){
+    handleChangePriority=(event)=>{
         let value = event.target.value;
-        if (value)  this.setState({priority: event.target.value});
-    }
+        if (value && !isNaN(parseInt(value)))  this.setState({priority: event.target.value});
+    };
 
     render() {
         return (
