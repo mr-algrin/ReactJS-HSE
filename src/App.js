@@ -13,14 +13,20 @@ class App extends React.Component{
     };
 
     handleSortByName=()=>{
-        this.state.trackers.sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1);
+        this.setState(state=>{
+            const newState = { ...this.state, trackers: [...this.state.trackers]};
+            newState.trackers.sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1);
+            return newState;
+        });
         console.log(this.props.trackers);
-        this.forceUpdate();
     };
 
     handleSortByPriority=()=>{
-        this.state.trackers.sort((a, b) => a.priority - b.priority);
-        this.forceUpdate();
+        this.setState(state=>{
+            const newState = { ...this.state, trackers: [...this.state.trackers]};
+            newState.trackers.sort((a, b) => a.priority - b.priority);
+            return newState;
+        });
     };
 
     render() {
