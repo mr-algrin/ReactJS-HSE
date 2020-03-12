@@ -57,8 +57,7 @@ div.item{
   padding: 10px;
   background: lightblue;
   font-size: 17pt;
-  border: 3px solid;
-  border-color: darkseagreen;
+  border: 3px solid darkseagreen;
 }
 
 .sortButton{
@@ -67,6 +66,7 @@ div.item{
   font-size: large;
   background: khaki;
   border-radius: 10px;
+
 }
 
 #add{

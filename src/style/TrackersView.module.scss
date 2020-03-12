@@ -1,0 +1,54 @@
+.TrackersView{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  flex:1 1 auto;
+}
+
+.sortButton{
+  height: 40px;
+  font-size: large;
+  font-weight: bold;
+  background: #0a7b6c;
+  border-radius: 15px;
+  align-items: normal;
+  flex:1 1 auto;
+  margin: 10px;
+}
+
+.Buttons{
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.TrackerList{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  padding-top: 10px;
+  margin: 15px;
+}
+
+.Item{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  background: #6ec689;
+  font-size: 17pt;
+  font-family: cursive;
+  border: 3px solid #5f3331;
+  border-radius: 60px;
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+h1{
+  font-family: "Courier New";
+}

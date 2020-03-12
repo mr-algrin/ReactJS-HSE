@@ -1,0 +1,18 @@
+.TrackerForm{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.addButton{
+  height: 40px;
+  width: 200px;
+  font-size: large;
+  font-weight: bold;
+  background: #0a7b6c;
+  border-radius: 15px;
+  margin-top: 20px;
+}
