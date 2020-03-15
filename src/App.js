@@ -1,6 +1,12 @@
 import React from 'react';
-import './App.css';
 import Menu from "./Menu";
+import {BrowserRouter as Router, Link, Route} from "react-router-dom";
+import styles from "./style/App.module.scss";
+import classnames from "classnames/bind";
+import TrackerForm from "./TrackerForm";
+import TrackersView from "./TrackersView";
+
+const cx = classnames.bind(styles);
 
 class App extends React.Component{
 
@@ -32,9 +38,15 @@ class App extends React.Component{
     render() {
         return (
             <body>
-                <div className="App">
-                    <Menu updateData={this.updateData}  trackers={this.state.trackers} sortByName={this.handleSortByName}
-                          sortByPriority={this.handleSortByPriority}/>
+                <div className={cx("App")}>
+                    <Router>
+                        <Menu updateData={this.updateData}  trackers={this.state.trackers} sortByName={this.handleSortByName}
+                              sortByPriority={this.handleSortByPriority}/>
+                        <div id={cx('Content')}>
+                            <Route exact path={"/add_tracker"} render={()=><TrackerForm updateData={this.updateData}/>} />
+                            <Route path={"/list_trackers"} render={()=><TrackersView trackers={this.state.trackers } sortByName={this.handleSortByName} sortByPriority={this.handleSortByPriority}/>}/>
+                        </div>
+                    </Router>
                 </div>
             </body>
         );

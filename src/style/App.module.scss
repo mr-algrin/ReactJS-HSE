@@ -1,0 +1,39 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.Menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  flex-direction: row;
+}
+
+.Content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  flex:1 1 auto;
+}
+
+ul {
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  font-size: 15pt;
+  color: darkslategrey;
+  display: inline;
+  margin-right:10px;
+}

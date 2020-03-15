@@ -1,4 +1,9 @@
 import React from "react";
+import styles from './style/TrackerForm.module.scss'
+
+import classnames from 'classnames/bind';
+
+const cx = classnames.bind(styles);
 
 class TrackerForm extends React.Component{
 
@@ -37,20 +42,20 @@ class TrackerForm extends React.Component{
 
     render() {
         return (
-            <div className="App">
+            <div className={cx('TrackerForm')}>
                 <div>
                     <h1 id={'tracker_name'}>Название</h1>
                     <input type={'text'} value={this.state.name} onChange={this.handleChangeName}/>
                 </div>
                 <div>
-                    <h2 id={'tracker_description'}>Описание</h2>
+                    <h1 id={'tracker_description'}>Описание</h1>
                     <textarea name="tracker_text" id="" cols="30" rows="10"  onChange={this.handleChangeDescription} value={this.state.description}></textarea>
                 </div>
                 <div>
-                    <h2 id={'tracker_priority'} >Приоритет</h2>
+                    <h1 id={'tracker_priority'} >Приоритет</h1>
                     <form><input type={'number'} pattern={'^[ 0-9]+$'} onChange={this.handleChangePriority} value={this.state.priority} /></form>
                 </div>
-                <button id={'add'} onClick={this.handleAddTrackerClick}>Добавить</button>
+                <button className={cx('addButton')} onClick={this.handleAddTrackerClick}>Добавить</button>
             </div>
         );
     }
