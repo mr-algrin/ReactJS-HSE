@@ -1,14 +1,10 @@
 import React from "react";
-import {BrowserRouter as Router, Link, Route} from "react-router-dom";
-import TrackerForm from "./TrackerForm";
-import TrackersView from "./TrackersView";
+import {Link} from "react-router-dom";
 
 import styles from "./style/App.module.scss";
 import classnames from "classnames/bind";
 
 const cx = classnames.bind(styles);
-
-
 
 class Menu extends React.Component{
     render() {

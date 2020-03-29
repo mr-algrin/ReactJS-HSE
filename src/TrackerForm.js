@@ -1,9 +1,14 @@
 import React from "react";
 import styles from './style/TrackerForm.module.scss'
-
 import classnames from 'classnames/bind';
+import {addTracker} from "./actions";
+import {connect} from "react-redux";
 
 const cx = classnames.bind(styles);
+
+const mapDispatchToProps = dispatch => ({
+    addTracker: (tracker) => dispatch(addTracker(tracker))
+});
 
 class TrackerForm extends React.Component{
 
@@ -23,7 +28,8 @@ class TrackerForm extends React.Component{
             }
         }
         this.setState({name:'', description: '', priority: ''});
-        this.props.updateData(dict);
+        //this.props.updateData(dict);
+        this.props.addTracker(dict);
         console.log(dict);
     };
 
@@ -61,4 +67,4 @@ class TrackerForm extends React.Component{
     }
 }
 
-export default TrackerForm;
+export default connect(null, mapDispatchToProps)(TrackerForm);

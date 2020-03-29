@@ -1,9 +1,21 @@
 import React from "react";
 import styles from './style/TrackersView.module.scss'
 import classnames from "classnames/bind";
+import { connect } from "react-redux";
+
+import {sortByName, sortByPriority} from './actions'
 
 const cx = classnames.bind(styles);
 
+
+const mapStateToProps = state => ({
+    trackers: state.trackers
+});
+
+const mapDispatchToProps = dispatch => ({
+    sortByName: () => dispatch(sortByName),
+    sortByPriority: () => dispatch(sortByPriority)
+});
 
 class  TrackersView extends React.Component{
 
@@ -31,4 +43,4 @@ class  TrackersView extends React.Component{
     }
 }
 
-export default TrackersView;
+export default connect(mapStateToProps, mapDispatchToProps)(TrackersView);
