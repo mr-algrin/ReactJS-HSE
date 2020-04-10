@@ -11,8 +11,7 @@ class Menu extends React.Component{
         return (
             <div className={cx('Menu')}>
                     <ul id={'nav'}>
-                        <li><Link to="/add_tracker">Добавление трекера</Link></li>
-                        <li><Link to="/list_trackers">Список трекеров</Link></li>
+                        <li><Link to="/projects">Проекты</Link></li>
                     </ul>
             </div>
         );
