@@ -70,7 +70,7 @@ class Projects extends Component{
                 </div>
                 <div className={cx('listProjects')}>
                     {
-                        this.props.projects.map((project, idx) => (<ProjectItem key={idx} removeAction={this.removeProject} project={project}/>))
+                        this.props.projects.map((project) => (<ProjectItem key={project.id} removeAction={this.removeProject} project={project}/>))
                     }
                 </div>
             </div>

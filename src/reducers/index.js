@@ -18,7 +18,7 @@ const rootReducer = (state = defaultState, action) => {
         }
 
         case SORT_BY_NAME:{
-            const trackers = {...state.trackers};
+            const trackers = { ...state.trackers, [action.payload]: [...state.trackers[action.payload]]};
             trackers[action.payload].sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1);
             return {
                 ...state,
@@ -27,7 +27,7 @@ const rootReducer = (state = defaultState, action) => {
         }
 
         case SORT_BY_PRIORITY:{
-            const trackers = {...state.trackers};
+            const trackers = { ...state.trackers, [action.payload]: [...state.trackers[action.payload]]};
             trackers[action.payload].sort((a, b) => a.priority - b.priority);
             return {
                 ...state,
