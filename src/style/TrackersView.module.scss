@@ -8,14 +8,21 @@
 }
 
 .sortButton{
-  height: 40px;
+  height: 50px;
   font-size: large;
   font-weight: bold;
-  background: #0a7b6c;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: black;
   border-radius: 15px;
   align-items: normal;
   flex:1 1 auto;
   margin: 10px;
+  outline: none;
+  &:active{
+    color: #ffffff;
+    background: #416e42;
+  }
 }
 
 .Buttons{
@@ -49,6 +56,8 @@
   margin-left: 10px;
 }
 
-h1{
+.TrackersView > h1{
   font-family: "Courier New";
+  margin: 0;
+  padding-top: 10px;
 }
