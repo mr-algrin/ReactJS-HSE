@@ -51,19 +51,24 @@
 }
 
 .listProjects{
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
 }
 
 .projectItem{
   display: flex;
-  flex-direction: row;
-  margin: 15px;
+  width: 200px;
+  flex: 0 0 20;
+  height: 200px;
+  flex-direction: column;
+  margin: 10px;
   vertical-align: middle;
   align-items: flex-end;
   background: linear-gradient(to right, #c1ffab, #f0ffab);
-  border-radius: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(26, 97, 255, 0.5);
   //border: 5px solid transparent;
   //border-radius: 30px;
   //border-image-source: linear-gradient(45deg, rgb(35, 143, 105), rgb(25, 250, 232));
@@ -82,5 +87,7 @@
 
 .projectItem > h2{
   width: 100%;
+  text-align: center;
+  height: 100%;
   padding-left: 60px;
 }

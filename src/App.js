@@ -10,26 +10,24 @@ import { Provider } from "react-redux";
 import rootReducer from "./reducers";
 import Projects from "./Projects";
 import ProjectView from "./ProjectView";
+import Login from './Login';
+import Header from './Header';
+
+import Main from "./Main";
 
 const cx = classnames.bind(styles);
 const store = createStore(rootReducer);
 
-class App extends React.Component{
+class App extends React.Component {
     render() {
         return (
             <Provider store={store}>
                 <div className={cx("App")}>
-                    <Router>
-                        <Menu/>
-                        <div id={cx('Content')}>
-                            <Route exact path={'/project/:projectId'} component={ProjectView}/>
-                            <Route exact path={'/projects'} component={Projects}/>
-                            <Redirect from="/" to="projects" />
-                        </div>
-                    </Router>
+                    <Header/>
+                    <Main/>
                 </div>
             </Provider>
-        );
+        )
     }
 }
 

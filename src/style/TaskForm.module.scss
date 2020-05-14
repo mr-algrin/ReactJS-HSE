@@ -1,7 +1,6 @@
-.TrackerForm{
+.TaskForm{
   display: flex;
   width: 100%;
-  height: 100%;
   flex-direction: column;
   text-align: center;
 }
@@ -62,4 +61,19 @@
     background: #416e42;
     border: 3px aqua;
   }
+}
+
+.AddTaskIcon{
+  margin-right: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #15d65b;
+  border: 1px solid #a5fcff;
+  box-shadow: 0 0 10px rgba(34, 107, 255, 0.5);
+}
+
+.AddTaskIcon:active{
+  background: #1b8b51;
+  //border: 3px solid #0f4264;
 }

@@ -22,8 +22,26 @@ export const createProject = (project) => ({
     payload: project
 });
 
+export const SET_PROJECTS = 'SET_PROJECTS';
+export const setProjects = (projects) => ({
+   type: SET_PROJECTS,
+   payload: projects
+});
+
+export const SET_TASKS = 'SET_TASKS';
+export const setTasks = (tasks) => ({
+    type: SET_TASKS,
+    payload: tasks
+});
+
 export const REMOVE_PROJECT = 'REMOVE_PROJECT';
 export const removeProject = (project) => ({
     type: REMOVE_PROJECT,
     payload: project
+});
+
+export const LOGIN = 'LOGIN';
+export const login = (token) => ({
+    type: LOGIN,
+    payload: token
 });
